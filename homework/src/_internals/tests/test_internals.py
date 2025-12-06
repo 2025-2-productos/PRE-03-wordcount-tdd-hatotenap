@@ -9,6 +9,7 @@ from ...wordcount import (
     split_into_words,
     write_word_counts,
 )
+from ..count_words import count_words
 from ..read_all_lines import read_all_lines
 
 
@@ -54,7 +55,7 @@ def test_count_words():
         "hello",
         "python",
     ]
-    word_counts = test_count_words(words)
+    word_counts = count_words(words)
     assert word_counts == {"hello": 2, "world": 1, "python": 1}
 
 
